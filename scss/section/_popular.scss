@@ -1,0 +1,89 @@
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.popular {
+    padding-top: 14rem;
+
+    .popular-wrapper {
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .popular-card {
+        background-color: #121315;
+        padding: 4.8rem 4.8rem 4rem;
+        cursor: pointer;
+        overflow: hidden;
+        max-height: 55rem;
+
+        &:hover .popular-hover {
+            transform: translateY(-15rem)
+        }
+    }
+
+    .popular-desc {
+        @include font(1.8rem, 600);
+        color: $color-c99e71;
+        font-family: $font-urbanist;
+        text-align: center
+    }
+
+    .popular-title {
+        @include font(4.8rem, 400);
+        color: $color-fff;
+        font-family: $font-righteous;
+        text-align: center;
+        margin-block: 1.5rem 6rem;
+    }
+
+    .popular-stars {
+        margin-top: 3.6rem;
+        color: $color-c99e71;
+        font-family: $font-urbanist;
+        text-transform: uppercase;
+        text-align: center;
+
+        span {
+            margin-right: 1.3rem;
+        }
+    }
+
+    .popular-title-product {
+        @include font(2.4rem, 400);
+        font-family: $font-righteous;
+        color: $color-fff;
+        text-transform: uppercase;
+        text-align: center;
+        margin-block: 2rem;
+    }
+
+    .popular-info {
+        @include font(1.8rem, 600);
+        text-transform: uppercase;
+        color: $color-fff;
+        text-align: center;
+
+        span {
+            color: $color-c99e71;
+        }
+    }
+
+    .popular-hover {
+        padding-block: 1rem;
+        background-color: #121315;
+        transition: .3s;
+        transform: translateY(2rem);
+
+    }
+
+    .btn-wrapper {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .cart-icon {
+       font-size: 2.5rem;
+       margin-right: 1rem;
+    }
+
+}

@@ -1,0 +1,42 @@
+@use '../base/mixins' as *;
+@use '../base/vars' as *;
+
+.home {
+
+    background: url('../image/hero-bg.jpg') center/cover no-repeat;
+    min-height: 85rem;
+
+    .home-content {
+        max-width: 60rem;
+        margin-top: 14.7rem;
+    }
+
+    .home-wrapper {
+        @include flex(flex, space-between, flex-end);
+    }
+
+    .home-title {
+        @include font(7.2rem, 700);
+        font-family: $font-righteous;
+        color: $color-fff;
+    }
+
+    .home-desc {
+        font-family: $font-urbanist;
+        font-size: 2rem;
+        color: $color-fff;
+        margin-block: 3rem 6rem;
+    }
+
+    .home-btn-play {
+        color: $color-fff;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    .btn-play {
+        width: 15rem;
+    }
+}

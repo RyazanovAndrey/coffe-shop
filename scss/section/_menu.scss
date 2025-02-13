@@ -1,0 +1,59 @@
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.menu {
+
+    margin-top: 14rem;
+
+    .menu-desc {
+        @include font(1.8rem, 600);
+        font-family: $font-urbanist;
+        color: $color-c99e71;
+        text-align: center;
+    }
+
+    .menu-title {
+        @include font(4.8rem, 400);
+        font-family: $font-righteous;
+        color: $color-fff;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    .menu-wrapper {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    .menu-left,
+    .menu-right {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        flex: 1;
+    }
+
+    .menu-card {
+        @include flex(flex, space-between, center);
+        width: 100%;
+        border: 1px solid #32323D;
+        padding: 2.5rem;
+    }
+
+    .menu-card-content {
+        @include flex(flex, space-between, center);
+        column-gap: 2rem;
+    }
+
+    .menu-card-title {
+        @include font(2.4rem, 400);
+        font-family: $font-righteous;
+        color: $color-fff;
+    }
+
+    .menu-card-price {
+        @include font(1.8rem, 600);
+        font-family: $font-urbanist;
+        color: $color-c99e71;
+    }
+}

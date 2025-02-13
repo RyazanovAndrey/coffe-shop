@@ -1,0 +1,32 @@
+@use './vars' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-inter;
+    background-color: $color-14110e;
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+}
+
+.btn-all {
+    background-color: $color-c99e71;
+    color: $color-fff;
+    padding: 2rem 5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

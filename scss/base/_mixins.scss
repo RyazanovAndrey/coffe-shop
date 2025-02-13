@@ -1,0 +1,20 @@
+@mixin font($fz, $fw) {
+    font-size: $fz;
+    font-weight: $fw;
+}
+
+@mixin padding($pad) {
+    padding-block: $pad;
+}
+
+@mixin position($pos: static, $top-or-bottom, $left-or-right) {
+    position: $pos;
+    #{$top-or-bott}: 0;
+    #{$left-or-right}: 0
+}
+
+@mixin flex($flex: inline, $jc: start, $ai: start) {
+    display: $flex;
+    justify-content: $jc;
+    align-items: $ai;
+}

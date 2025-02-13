@@ -1,0 +1,81 @@
+@use '../base/mixins' as *;
+@use '../base/vars' as *;
+
+.best {
+    margin-top: 14rem;
+
+    .best-top {
+        display: flex;
+        column-gap: 4rem;
+        margin-bottom: 14rem;
+
+        display: none;
+    }
+
+    .best-top-card-title {
+        position: relative;
+        @include font(2.4rem, 400);
+        font-family: $font-righteous;
+        color: $color-fff;
+        padding-left: 5rem;
+        margin-bottom: 2.4rem;
+
+        &::before {
+            position: absolute;
+            content: attr(data-best);
+            top: 0;
+            left: 0;
+            @include font(2.4rem, 400);
+            color: $color-c99e71;
+        }
+    }
+
+    .best-bottom {
+        display: grid;
+        grid-template-areas: 
+        "grid-1 grid-2 grid-3"
+        "grid-4 grid-2 grid-3"
+        ;
+        column-gap: 3rem;
+        row-gap: 3rem;
+        align-items: stretch;
+    }
+
+    .grid-1 {
+        grid-area: grid-1;
+    }
+    .grid-2 {
+        grid-area: grid-2;
+    }
+    .grid-3 {
+        grid-area: grid-3;
+        background-color: $color-1c1814;
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    .grid-4 {
+        grid-area: grid-4;
+    }
+
+    .best-desc {
+        @include font(1.8rem, 500);
+        color: $color-c99e71;
+        font-family: $font-urbanist;
+    }
+
+    .best-title {
+        @include font(4.8rem, 400);
+        color: $color-fff;
+        font-family: $font-righteous;
+        margin-block: 1.2rem 3rem
+    }
+    .best-text {
+        @include font(1.6rem, 500);
+        color: $color-fff;
+        font-family: $font-urbanist;
+        line-height: 1.8;
+    }
+}

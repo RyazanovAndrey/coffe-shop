@@ -1,0 +1,34 @@
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.header {
+    padding-block: 3rem;
+}
+
+.menu-wrapper {
+
+    @include flex(flex, space-between, center);
+
+    .menu-left,
+    .menu-right {
+        @include flex(flex, center, center);
+        column-gap: 5rem;
+
+        .menu-link {
+            color: $color-fff;
+            font-size: 1.8rem;
+
+            &.active-link {
+                color: $color-c99e71;
+            }
+        }
+
+        .ri-search-line,
+        .ri-shopping-bag-3-line
+        {
+            color: $color-fff;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+}
