@@ -1,0 +1,70 @@
+@use '../base/sample' as *;
+@use '../base/mixins' as *;
+@use '../base/vars' as *;
+
+.testimonial {
+
+    @extend %padding;
+
+    .testimonial-desc {
+        @include font(1.8rem, 600);
+        color: $color-c99e71;
+        font-family: $font-urbanist;
+        text-align: center;
+    }
+
+    .testimonial-text {
+        @include font(4.8rem, 600);
+        color: $color-fff;
+        font-family: $font-righteous;
+        text-align: center;
+        margin-block: 1.2rem 6rem;
+    }
+
+    .testimonial-wrapper {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    .testimonial-card {
+        background-color: $color-1c1814;
+    }
+
+    .testimonial-info {
+        padding: 2rem 2.5rem;
+    }
+
+    .testimonial-by {
+        display: flex;
+        justify-content: space-between;
+        color: $color-fff;
+    }
+
+    .line {
+        color: $color-c99e71;
+    }
+
+    .testimonial-news-title {
+        @include font(2rem, 400);
+        color: $color-fff;
+        font-family: $font-righteous;
+        margin-block: 1.6rem 3.2rem;
+    }
+
+    .testimonial-link {
+        color: $color-c99e71;
+        @include flex(flex, start, center);
+
+        &:hover .ri-arrow-right-line {
+            transform: translateX(.5rem);
+        }
+    }
+
+    .ri-arrow-right-line {
+        position: relative;
+        font-size: 2rem;
+        margin-left: 1rem;
+        transform: translateX(0);
+        transition: .3s;
+    }
+}

@@ -17,8 +17,13 @@
         .menu-link {
             color: $color-fff;
             font-size: 1.8rem;
+            transition: .3s;
 
             &.active-link {
+                color: $color-c99e71;
+            }
+
+            &:hover {
                 color: $color-c99e71;
             }
         }

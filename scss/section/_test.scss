@@ -1,0 +1,104 @@
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.test {
+    margin-top: 14rem;
+
+    .text-desc {
+        @include font(1.8rem, 600);
+        color: $color-c99e71;
+        font-family: $font-urbanist;
+        text-align: center;
+    }
+
+    .test-title {
+        @include font(4.8rem, 400);
+        color: $color-fff;
+        font-family: $font-righteous;
+        text-align: center;
+    }
+
+    .test-card {
+        max-width: 56.5rem;
+        background-color: $color-1c1814;
+        padding: 4rem;
+    }
+
+    .test-card-top {
+        display: flex;
+        column-gap: 2.4rem;
+    }
+
+    .test-card-text {
+        color: $color-fff;
+        font-family: $font-urbanist;
+        font-weight: 500;
+        line-height: 1.8;
+    }
+
+    .test-card-bottom {
+        @include flex(flex, space-between, center);
+        margin-top: 2.8rem;
+
+        span {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: $color-fff;
+            font-family: $font-urbanist;
+        }
+
+        .text-job {
+            font-size: 1.4rem;
+            color: $color-fff;
+            margin-top: .5rem;
+            font-family: $font-urbanist;
+        }
+    }
+
+    .test-slide {
+        margin-top: 4rem;
+    }
+
+    .swiper {
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        display: inline-flex;
+    }
+
+    .test-slider-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .test-slider-arrows {
+        width: 13rem;
+      @include flex(flex, space-between, center);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next
+    {
+        background: url('../image/arrow-default.svg');
+        width: 5.6rem;
+        height: 5.6rem;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        background: url('../../image/arrow-active.svg');
+    }
+
+    .swiper-button-next {
+        rotate: 180deg;
+    }
+}
+
+.test-slide .swiper-pagination-fraction {
+    color: $color-c99e71;
+}

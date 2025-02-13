@@ -3,6 +3,7 @@
 @forward 'base/base';
 @forward 'base/reset';
 @forward 'base/mixins';
+@forward 'base/sample';
 
 // Section
 @forward 'section//header';
@@ -11,3 +12,7 @@
 @forward 'section/popular';
 @forward 'section/machine';
 @forward 'section/menu';
+@forward 'section/test';
+@forward 'section/reserv';
+@forward 'section/testimonial';
+@forward 'section/footer';

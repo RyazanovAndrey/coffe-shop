@@ -1,0 +1,56 @@
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.reserv {
+    margin-top: 14rem;
+
+    .reserv-wrapper {
+        display: flex;
+        background-color: $color-1c1814;
+    }
+
+    .reserv-content {
+        @include flex(flex, center, center);
+        flex-direction: column;
+        padding: 7rem 4.8rem;
+    }
+
+    .reserv-desc {
+        @include font(1.8rem, 600);
+        color: $color-c99e71;
+        font-family: $font-urbanist;
+        text-align: center;
+    }
+
+    .reserv-title {
+        @include font(4.8rem, 400);
+        color: $color-fff;
+        font-family: $font-righteous;
+        text-align: center;
+    }
+
+    .reserv-field {
+        width: 100%;
+        background-color: $color-14110e;
+        height: 5rem;
+        padding-left: 2rem;
+        color: $color-fff;
+
+        &:nth-child(n + 2) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    .btn-center {
+        text-align: center;
+    }
+
+    .btn-res {
+        margin-top: 2rem;
+        display: inline-block;
+    }
+}
+
+.reserv-field::placeholder {
+    color: grey;
+}

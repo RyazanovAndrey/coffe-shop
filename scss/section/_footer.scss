@@ -1,0 +1,47 @@
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+@use '../base/sample' as *;
+
+.footer {
+    @extend %padding;
+
+    .footer-wrapper {
+        @include flex(flex, space-between, center);
+    }
+
+    .footer-menu {
+        display: flex;
+        column-gap: 4rem;
+    }
+
+    .footer-link {
+        @include font(2rem, 400);
+        font-family: $font-urbanist;
+        color: $color-fff;
+    }
+
+    .footer-bottom {
+        background-color: $color-1c1814;
+        padding-block: 2rem;
+        margin-top: 6rem;
+        color: $color-fff;
+        text-align: center;
+    }
+
+    .input-box {
+        display: flex;
+        background-color: $color-1c1814;
+        border-radius: 5rem;
+        padding: 1.2rem;
+
+        input {
+            color: $color-fff;
+            padding-left: 2rem;
+        }
+        
+    }
+    .input-img {
+        rotate: 180deg;
+        cursor: pointer;
+    }
+}
